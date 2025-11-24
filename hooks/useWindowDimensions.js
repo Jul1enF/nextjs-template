@@ -11,10 +11,10 @@ export function useWindowDimensions() {
 
     useEffect(() => {
 
-        setVw(window.innerWidth / 100);
-        setVh(window.innerHeight / 100)
-
         const handleResize = () => {
+            setVw(window.innerWidth / 100);
+            setVh(window.innerHeight / 100)
+
             if (window.innerHeight >= 600 && window.innerWidth / window.innerHeight > 1 || window.innerWidth >= 1100 && window.innerWidth / window.innerHeight < 1) {
                 setComputerDisplay(true)
             } else {
