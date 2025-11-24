@@ -6,7 +6,6 @@ function Home() {
         <h2 className="pageTitle">
           What's next ?!
         </h2>
-        <div style={{minHeight : 2000, width : "100%", backgroundColor : "red"}}/>
     </div>
   );
 }
