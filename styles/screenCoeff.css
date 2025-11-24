@@ -1,0 +1,28 @@
+/* Tablets  */
+@media only screen and (max-width: 1100px) and (min-width: 600px) and (aspect-ratio < 1) {
+    :root {
+        --screen-coeff: 1.5;
+    }
+}
+
+/* Regular phones  */
+@media only screen and (max-width: 600px) and (min-width: 390px) and (aspect-ratio < 1) {
+    :root {
+        --screen-coeff: 1;
+    }
+}
+
+/* Small phones */
+@media only screen and (max-width: 390px) and (aspect-ratio < 1) {
+    :root {
+        --screen-coeff: 0.9;
+    }
+}
+
+
+/* Devices in landscape */
+@media only screen and (max-height: 600px) and (aspect-ratio > 1){
+     :root {
+        --screen-coeff: 1;
+    }
+}

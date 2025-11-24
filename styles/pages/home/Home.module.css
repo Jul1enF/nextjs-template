@@ -1,0 +1,31 @@
+/* Computer */
+@media only screen and (min-width: 1100px) and (aspect-ratio < 1),
+only screen and (min-height: 600px) and (aspect-ratio > 1) {
+  .body {
+    width: 100vw;
+    height: 100dvh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: var(--page-padding-top);
+    padding-bottom: var(--page-padding-bottom);
+    overflow-y: scroll;
+  }
+}
+
+
+/* Phones */
+@media only screen and (max-width: 1100px) and (aspect-ratio < 1),
+only screen and (max-height: 600px) and (aspect-ratio > 1) {
+
+  .body {
+    width: 100vw;
+    min-height: calc(100dvh - var(--header-height));
+    padding-bottom: var(--page-padding-bottom);
+    padding-top: var(--page-padding-top);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+}
