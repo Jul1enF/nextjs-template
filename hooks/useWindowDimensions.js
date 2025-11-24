@@ -1,4 +1,4 @@
-import { useState, useLayoutEffect } from "react";
+import { useState, useEffect } from "react";
 
 export function useWindowDimensions() {
 
@@ -6,10 +6,11 @@ export function useWindowDimensions() {
     const [computerDisplay, setComputerDisplay] = useState(false)
 
     // States to register in real time vw and vh
-    const [vw, setVw] = useState(1)
-    const [vh, setVh] = useState(1)
+    const [vw, setVw] = useState(0)
+    const [vh, setVh] = useState(0)
 
-    useLayoutEffect(() => {
+    useEffect(() => {
+
         setVw(window.innerWidth / 100);
         setVh(window.innerHeight / 100)
 
