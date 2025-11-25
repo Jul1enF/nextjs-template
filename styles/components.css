@@ -7,6 +7,10 @@
     padding: 0;
 }
 
+:root {
+    --regular-card-width: calc(var(--regular-item-width) + var(--card-lateral-padding) * 2);
+}
+
 /* Computer */
 @media only screen and (min-width: 1100px) and (aspect-ratio < 1),
 only screen and (min-height: 600px) and (aspect-ratio > 1) {
@@ -23,10 +27,21 @@ only screen and (min-height: 600px) and (aspect-ratio > 1) {
         --large-item-height: 3.6vw;
         --very-large-item-width: 71.5vw;
         --item-margin-top: 1.1vw;
+        --card-lateral-padding: 2vw;
     }
 
 
     /* Components style */
+    .card {
+        background-color: var(--dark-grey);
+        padding: 3vw var(--card-lateral-padding);
+        border-radius: var(--regular-border-radius);
+        margin-top: 2vw;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
     .regularInput {
         width: var(--regular-item-width);
         min-height: var(--regular-item-height);
@@ -95,8 +110,19 @@ only screen and (max-height: 600px) and (aspect-ratio > 1) {
         --large-item-width: calc(var(--screen-coeff) * 380px);
         --large-item-height: calc(var(--screen-coeff) * 50px);
         --item-margin-top: calc(var(--screen-coeff) * 15px);
+        --card-lateral-padding: calc(var(--screen-coeff) * 20px);
     }
 
+    /* Components style */
+    .card {
+        background-color: var(--dark-grey);
+        padding: calc(var(--screen-coeff) * 30px) var(--card-lateral-padding) calc(var(--screen-coeff) * 20px);
+        border-radius: var(--regular-border-radius);
+        margin-top: calc(var(--screen-coeff) * 20px);
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
 
     .regularInput {
         width: var(--regular-item-width);
@@ -110,18 +136,6 @@ only screen and (max-height: 600px) and (aspect-ratio > 1) {
         font-size: var(--regular-font-size);
     }
 
-    .largeItem {
-        width: var(--large-item-width);
-        max-width: 100%;
-        min-height: var(--large-item-height);
-        height: var(--large-item-height);
-        border-radius: var(--regular-border-radius);
-        background-color: var(--dark-grey);
-        border: none;
-        padding: 0 calc(var(--screen-coeff) * 10px);
-        margin-top: var(--item-margin-top);
-    }
-
     .regularButton {
         width: var(--regular-item-width);
         min-height: var(--regular-item-height);
@@ -132,6 +146,18 @@ only screen and (max-height: 600px) and (aspect-ratio > 1) {
         margin-top: var(--item-margin-top);
         cursor: pointer;
         -webkit-tap-highlight-color: transparent;
+    }
+
+    .largeItem {
+        width: var(--large-item-width);
+        max-width: 100%;
+        min-height: var(--large-item-height);
+        height: var(--large-item-height);
+        border-radius: var(--regular-border-radius);
+        background-color: var(--dark-grey);
+        border: none;
+        padding: 0 calc(var(--screen-coeff) * 10px);
+        margin-top: var(--item-margin-top);
     }
 
     .passwordIcon {
