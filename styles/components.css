@@ -13,7 +13,7 @@ only screen and (min-height: 600px) and (aspect-ratio > 1) {
 
     /* Main sizes of the components */
     :root {
-        --header-height: 10vw;
+        --header-height: 7vw;
         --page-padding-top: calc(var(--header-height) + 4vw);
         --page-padding-bottom: 4vw;
         --regular-border-radius: 0.8vw;

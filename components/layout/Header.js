@@ -1,6 +1,6 @@
-import styles from "@/styles/layout/computer/ComputerHeader.module.css"
+import styles from "@/styles/layout/Header.module.css"
 
-export default function ComputerHeader () {
+export default function Header() {
 
     return (
         <div className={styles.body} >
