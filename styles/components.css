@@ -38,7 +38,7 @@ only screen and (min-height: 600px) and (aspect-ratio > 1) {
     /* Main sizes of the components */
     :root {
         --header-height: 7vw;
-        --page-padding-top: calc(var(--header-height) + 4vw);
+        --page-padding-top: 2.5vw;
         --page-padding-bottom: 4vw;
         --regular-border-radius: 0.8vw;
         --regular-item-width: 25vw;
@@ -52,6 +52,20 @@ only screen and (min-height: 600px) and (aspect-ratio > 1) {
 
 
     /* Components style */
+    .pageBody {
+        background-color: var(--light-grey);
+        width: 100vw;
+        height: calc(100dvh - var(--header-height));
+        top : var(--header-height);
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding-top: var(--page-padding-top);
+        padding-bottom: var(--page-padding-bottom);
+        overflow-y: scroll;
+    }
+
     .card {
         padding: 3vw var(--card-lateral-padding);
         border-radius: var(--regular-border-radius);
@@ -116,6 +130,19 @@ only screen and (max-height: 600px) and (aspect-ratio > 1) {
     }
 
     /* Components style */
+      .pageBody {
+        background-color: var(--light-grey);
+        width: 100vw;
+        min-height: calc(100dvh - var(--header-height));
+        top: var(--header-height);
+        padding-bottom: var(--page-padding-bottom);
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding-top: var(--page-padding-top);
+        position: relative;
+    }
+
     .card {
         padding: calc(var(--screen-coeff) * 30px) var(--card-lateral-padding) calc(var(--screen-coeff) * 20px);
         border-radius: var(--regular-border-radius);
