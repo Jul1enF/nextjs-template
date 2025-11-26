@@ -41,6 +41,7 @@ only screen and (min-height: 600px) and (aspect-ratio > 1) {
         font-weight: 500;
         letter-spacing: 0.05vw;
         margin: 1.5vw 0 0 0;
+        text-align: center;
     }
 
     .smallText {

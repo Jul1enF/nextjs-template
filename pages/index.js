@@ -1,4 +1,4 @@
-import Home from '../components/index/Home';
+import Home from '@/components/pages/index/Home';
 
 function Index() {
   return <Home />;

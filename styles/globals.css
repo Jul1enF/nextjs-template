@@ -16,11 +16,13 @@ body {
 /* Changes of default settings */
 input {
     outline: none;
+    text-align: left;
 }
 
 button {
     -webkit-tap-highlight-color: transparent;
     cursor: pointer;
+    text-align: center;
 }
 
 div {

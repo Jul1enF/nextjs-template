@@ -1,15 +1,35 @@
 /* Computer and Phones */
-.passwordInput {
-    width: 90%;
+.inputWithIcon {
+    width: 85%;
     height: 100%;
     background-color: transparent;
     border: none;
     padding: 0;
+    margin: 0;
 }
 
 :root {
     --regular-card-width: calc(var(--regular-item-width) + var(--card-lateral-padding) * 2);
 }
+
+/* Computer and Phones border and background styles */
+
+.medGreyBorder {
+    background-color: transparent;
+    border: 1px solid var(--medium-grey);
+}
+
+.brightRedBg {
+    background-color: var(--bright-red);
+    border: none;
+}
+
+.darkGreyBg {
+    background-color: var(--dark-grey);
+    border: none;
+}
+
+
 
 /* Computer */
 @media only screen and (min-width: 1100px) and (aspect-ratio < 1),
@@ -33,7 +53,6 @@ only screen and (min-height: 600px) and (aspect-ratio > 1) {
 
     /* Components style */
     .card {
-        background-color: var(--dark-grey);
         padding: 3vw var(--card-lateral-padding);
         border-radius: var(--regular-border-radius);
         margin-top: 2vw;
@@ -42,16 +61,13 @@ only screen and (min-height: 600px) and (aspect-ratio > 1) {
         align-items: center;
     }
 
-    .regularInput {
+    .regularItem {
         width: var(--regular-item-width);
         min-height: var(--regular-item-height);
         height: var(--regular-item-height);
         border-radius: var(--regular-border-radius);
-        background-color: transparent;
-        border: 1px solid var(--light-grey);
-        padding: 0 1vw;
         margin-top: var(--item-margin-top);
-        font-size: var(--regular-font-size);
+        padding: 0 1vw;
     }
 
     .largeItem {
@@ -59,21 +75,8 @@ only screen and (min-height: 600px) and (aspect-ratio > 1) {
         min-height: var(--large-item-height);
         height: var(--large-item-height);
         border-radius: var(--regular-border-radius);
-        background-color: var(--dark-grey);
-        border: none;
         padding: 0 1vw;
         margin-top: var(--item-margin-top);
-    }
-
-    .regularButton {
-        width: var(--regular-item-width);
-        min-height: var(--regular-item-height);
-        height: var(--regular-item-height);
-        border-radius: var(--regular-border-radius);
-        background-color: var(--bright-red);
-        border: none;
-        margin-top: var(--item-margin-top);
-        cursor: pointer;
     }
 
     .passwordIcon {
@@ -90,7 +93,6 @@ only screen and (min-height: 600px) and (aspect-ratio > 1) {
     .computerLargeItemWidth {
         width: var(--large-item-width);
     }
-
 
 }
 
@@ -115,7 +117,6 @@ only screen and (max-height: 600px) and (aspect-ratio > 1) {
 
     /* Components style */
     .card {
-        background-color: var(--dark-grey);
         padding: calc(var(--screen-coeff) * 30px) var(--card-lateral-padding) calc(var(--screen-coeff) * 20px);
         border-radius: var(--regular-border-radius);
         margin-top: calc(var(--screen-coeff) * 20px);
@@ -124,28 +125,13 @@ only screen and (max-height: 600px) and (aspect-ratio > 1) {
         align-items: center;
     }
 
-    .regularInput {
+    .regularItem {
         width: var(--regular-item-width);
         min-height: var(--regular-item-height);
         height: var(--regular-item-height);
         border-radius: var(--regular-border-radius);
-        background-color: transparent;
-        border: 1px solid var(--light-grey);
+        margin-top: var(--item-margin-top);
         padding: 0 calc(var(--screen-coeff) * 10px);
-        margin-top: var(--item-margin-top);
-        font-size: var(--regular-font-size);
-    }
-
-    .regularButton {
-        width: var(--regular-item-width);
-        min-height: var(--regular-item-height);
-        height: var(--regular-item-height);
-        border-radius: var(--regular-border-radius);
-        background-color: var(--bright-red);
-        border: none;
-        margin-top: var(--item-margin-top);
-        cursor: pointer;
-        -webkit-tap-highlight-color: transparent;
     }
 
     .largeItem {
@@ -154,8 +140,6 @@ only screen and (max-height: 600px) and (aspect-ratio > 1) {
         min-height: var(--large-item-height);
         height: var(--large-item-height);
         border-radius: var(--regular-border-radius);
-        background-color: var(--dark-grey);
-        border: none;
         padding: 0 calc(var(--screen-coeff) * 10px);
         margin-top: var(--item-margin-top);
     }
