@@ -1,13 +1,13 @@
 import { useEffect, useRef } from "react";
 
-export function useLockTransition(refs) {
+export function useLockTransitions(refs) {
     const timeout = useRef(null);
 
     const array = Array.isArray(refs) ? refs
         : typeof refs === "object" && refs !== null ? Object.values(refs)
         : [refs];
 
-    const nodesArray = array.map(e => e.current ? e.current : e)
+    const nodesArray = array.map(e => e?.current ? e.current : e)
 
     useEffect(() => {
         const freezeTransitions = () => {
@@ -27,5 +27,5 @@ export function useLockTransition(refs) {
             window.removeEventListener("resize", freezeTransitions);
             clearTimeout(timeout.current);
         };
-    }, []);
+    }, [nodesArray[0]]);
 }
