@@ -16,7 +16,7 @@
 
 .medGreyBorder {
     background-color: transparent;
-    border: 1px solid var(--medium-grey);
+    border: 2px solid var(--medium-grey);
 }
 
 .brightRedBg {
@@ -37,7 +37,7 @@ only screen and (min-height: 600px) and (aspect-ratio > 1) {
 
     /* Main sizes of the components */
     :root {
-        --header-height: 7vw;
+        --header-height: 6.5vw;
         --page-padding-top: 2.5vw;
         --page-padding-bottom: 4vw;
         --regular-border-radius: 0.8vw;

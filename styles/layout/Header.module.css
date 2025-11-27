@@ -17,10 +17,11 @@ only screen and (min-height: 600px) and (aspect-ratio > 1) {
 .headerTitle {
     color: var(--dark-white);
     margin: 0;
-    font-size: 2.8vw;
+    font-size: 2.9vw;
     letter-spacing: 0.15vw;
     font-weight: 600;
     text-align: center;
+    cursor: pointer;
 }
 }
 
@@ -47,5 +48,6 @@ only screen and (max-height: 600px) and (aspect-ratio > 1) {
     letter-spacing: calc(var(--screen-coeff) * 2px);
     font-weight: 600;
     text-align: center;
+    cursor: pointer;
 }
 }
