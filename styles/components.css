@@ -20,7 +20,7 @@
 
 .medGreyBorder {
     background-color: transparent;
-    border: 2px solid var(--medium-grey);
+    border: 2px solid var(--strong-grey);
 }
 
 .brightRedBg {
