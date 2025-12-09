@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
 
-export function useWindowDimensions() {
+export default function useWindowDimensions() {
 
     // State to know if the app is display on a computer or a smaller screen
     const [computerDisplay, setComputerDisplay] = useState(false)

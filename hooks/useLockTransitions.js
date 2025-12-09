@@ -1,6 +1,6 @@
 import { useEffect, useRef } from "react";
 
-export function useLockTransitions(refs) {
+export default function useLockTransitions(refs) {
     const timeout = useRef(null);
 
     const array = Array.isArray(refs) ? refs
