@@ -1,0 +1,56 @@
+/* Computer */
+@media only screen and (min-width: 1100px) and (aspect-ratio < 1),
+only screen and (min-height: 600px) and (aspect-ratio > 1) {
+  .mainContainer {
+    width: 100%;
+    height: 6vw;
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    border-bottom: 1px solid var(--light-grey);
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: var(--bright-grey);
+    font-size: 1.4vw;
+    letter-spacing: 0.1vw;
+    font-weight: 500;
+    line-height: 1.4em;
+    text-align: center;
+    margin: 0;
+    background-color: var(--medium-grey);
+  }
+
+  .mainContainer:hover {
+    background-color: color-mix(in srgb, var(--medium-grey) 90%, black);
+    color : color-mix(in srgb, var(--bright-grey) 85%, transparent);
+  }
+}
+
+/* Phones */
+@media only screen and (max-width: 1100px) and (aspect-ratio < 1),
+only screen and (max-height: 600px) and (aspect-ratio > 1) {
+  .mainContainer {
+    width: 100%;
+    height: calc(var(--screen-coeff) * 90px);
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    border-bottom: 1px solid var(--light-grey);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: var(--bright-grey);
+    margin: 0;
+    font-size: calc(var(--screen-coeff) * 22px);
+    letter-spacing: calc(var(--screen-coeff) * 2px);
+    font-weight: 500;
+    text-align: center;
+    line-height: 1.4em;
+    background-color: var(--medium-grey);
+    ;
+  }
+}
