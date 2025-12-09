@@ -9,6 +9,9 @@ export default function useWindowDimensions() {
     const [vw, setVw] = useState(1)
     const [vh, setVh] = useState(1)
 
+    // State to register the free height available in the layout
+    const [freeHeight, setFreeHeight]=useState(100)
+
     useEffect(() => {
 
         const handleResize = () => {
@@ -20,6 +23,16 @@ export default function useWindowDimensions() {
             } else {
                 setComputerDisplay(false)
             }
+
+            const fixedHeaders = document.querySelectorAll("[fixed-header]");
+            let fixedHeadersHeight = 0
+            if (fixedHeaders.length) fixedHeaders.forEach(e => fixedHeadersHeight += e.clientHeight)
+
+            const fixedFooters = document.querySelectorAll("[fixed-footer]");
+            let fixedFootersHeight = 0
+            if (fixedFooters.length) fixedFooters.forEach(e => fixedFootersHeight += e.clientHeight)
+            
+            setFreeHeight(window.innerHeight - fixedHeadersHeight - fixedFootersHeight)
         };
 
         handleResize()
@@ -30,5 +43,5 @@ export default function useWindowDimensions() {
         };
     }, []);
 
-    return { computerDisplay, vw, vh }
+    return { computerDisplay, vw, vh, freeHeight }
 }

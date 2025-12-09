@@ -1,4 +1,4 @@
-import styles from "@/styles/layout/PhoneTabBar.module.css"
+import styles from "@/styles/layout/phone/PhoneTabBar.module.css"
 import PhoneTabBarItem from "./PhoneTabBarItem"
 import { useState, useEffect } from "react"
 
@@ -23,7 +23,7 @@ export default function PhoneTabBar() {
     }, []);
 
     return (
-        <div className={styles.mainContainer} style={keyboardMounted ? { visibility : "hidden" } : { visibility : "visible" }}>
+        <div className={styles.mainContainer} style={keyboardMounted ? { visibility : "hidden" } : { visibility : "visible" }} fixed-footer="true">
             <PhoneTabBarItem targetedPage="/" />
             <PhoneTabBarItem targetedPage="/vods" />
             <PhoneTabBarItem targetedPage="/user-profile" />

@@ -5,8 +5,11 @@ import '@/styles/components.css'
 import '@/styles/screenCoeff.css'
 import Head from 'next/head';
 import Header from '@/components/layout/Header';
+import PhoneTabBar from '@/components/layout/phone/PhoneTabBar';
+import useWindowDimensions from '@/hooks/useWindowDimensions';
 
 function App({ Component, pageProps }) {
+const { computerDisplay } = useWindowDimensions()
 
   return (
     <>
@@ -17,6 +20,8 @@ function App({ Component, pageProps }) {
       <Header />
 
       <Component {...pageProps} />
+
+      {!computerDisplay && <PhoneTabBar />}
     </>
   );
 }
