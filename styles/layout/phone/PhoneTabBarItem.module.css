@@ -1,0 +1,34 @@
+    .mainContainer {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        text-decoration: none;
+        -webkit-tap-highlight-color: transparent;
+    }
+
+    .icon {
+        color: var(--light-grey);
+        width: calc(var(--screen-coeff) * 27px);
+        height: calc(var(--screen-coeff) * 27px);
+    }
+
+    .selectedIcon {
+        color: var(--dark-white);
+        width: calc(var(--screen-coeff) * 27px);
+        height: calc(var(--screen-coeff) * 27px);
+    }
+
+    .pageName {
+        color: var(--light-grey);
+        font-size: calc(var(--screen-coeff) * 18px);
+        font-weight: 600;
+        margin: calc(var(--screen-coeff) * 5px) 0 0 0;
+    }
+
+    .selectedPageName {
+        color: var(--dark-white);
+        font-size: calc(var(--screen-coeff) * 18px);
+        font-weight: 600;
+        margin: calc(var(--screen-coeff) * 5px) 0 0 0;
+    }
