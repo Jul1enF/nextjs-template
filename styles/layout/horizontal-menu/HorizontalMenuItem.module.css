@@ -1,0 +1,32 @@
+/* Computer */
+@media only screen and (min-width: 1100px) and (aspect-ratio < 1),
+only screen and (min-height: 600px) and (aspect-ratio > 1) {
+
+    .linkItem {
+        background-color: transparent;
+        border: none;
+        font-size: 1.1em;
+        position: relative;
+        height: 100%;
+        border-bottom: solid 0.38vw transparent;
+    }
+
+    .unselectedLinkItem:hover {
+        color: var(--bright-grey);
+        border-bottom: solid 0.38vw color-mix(in srgb, var(--strong-red) 60%, transparent);
+    }
+}
+
+/* Phones */
+@media only screen and (max-width: 1100px) and (aspect-ratio < 1),
+only screen and (max-height: 600px) and (aspect-ratio > 1) {
+
+    .linkItem {
+        background-color: transparent;
+        border: none;
+        font-size: 1.1em;
+        height: 100%;
+        white-space: nowrap;
+        flex-shrink: 0;
+    }
+}

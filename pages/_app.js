@@ -5,6 +5,7 @@ import '@/styles/components.css'
 import '@/styles/screenCoeff.css'
 import Head from 'next/head';
 import Header from '@/components/layout/Header';
+import HorizontalMenu from '@/components/layout/horizontal-menu/HorizontalMenu';
 
 function App({ Component, pageProps }) {
 
@@ -15,6 +16,8 @@ function App({ Component, pageProps }) {
       </Head>
 
       <Header />
+
+      <HorizontalMenu />
 
       <Component {...pageProps} />
     </>
