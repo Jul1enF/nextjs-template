@@ -9,8 +9,9 @@ export default function useWindowDimensions() {
     const [vw, setVw] = useState(1)
     const [vh, setVh] = useState(1)
 
-    // State to register the free height available in the layout
+    // States to register the free height available in the layout and the fixed headers height
     const [freeHeight, setFreeHeight]=useState(100)
+    const [headersHeight, setHeadersHeight]=useState(0)
 
     useEffect(() => {
 
@@ -27,6 +28,7 @@ export default function useWindowDimensions() {
             const fixedHeaders = document.querySelectorAll("[fixed-header]");
             let fixedHeadersHeight = 0
             if (fixedHeaders.length) fixedHeaders.forEach(e => fixedHeadersHeight += e.clientHeight)
+            setHeadersHeight(fixedHeadersHeight)
 
             const fixedFooters = document.querySelectorAll("[fixed-footer]");
             let fixedFootersHeight = 0
@@ -43,5 +45,5 @@ export default function useWindowDimensions() {
         };
     }, []);
 
-    return { computerDisplay, vw, vh, freeHeight }
+    return { computerDisplay, vw, vh, freeHeight, headersHeight }
 }
