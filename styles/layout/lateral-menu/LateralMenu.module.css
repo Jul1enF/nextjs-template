@@ -1,0 +1,46 @@
+/* Computer */
+@media only screen and (min-width: 1100px) and (aspect-ratio < 1),
+  only screen and (min-height: 600px) and (aspect-ratio > 1) {
+  .mainContainer {
+    --menu-width: 30vw;
+    width: var(--menu-width);
+    background-color: var(--medium-grey);
+    position: absolute;
+    overflow-y: scroll;
+    z-index: 1;
+  }
+
+  .visible {
+    left: 0;
+    transition: left 0.5s;
+  }
+
+  .hidden {
+    left: calc(var(--menu-width) * -1);
+    transition: left 0.5s;
+  }
+}
+
+/* Phones */
+@media only screen and (max-width: 1100px) and (aspect-ratio < 1),
+  only screen and (max-height: 600px) and (aspect-ratio > 1) {
+  .mainContainer {
+    --menu-width: calc(var(--screen-coeff) * 330px);
+    width: var(--menu-width);
+    background-color: var(--medium-grey);
+    position: absolute;
+    left: 0;
+    overflow-y: scroll;
+    z-index: 1;
+  }
+
+  .visible {
+    left: 0;
+    transition: left 0.5s;
+  }
+
+  .hidden {
+    left: calc(var(--menu-width) * -1);
+    transition: left 0.5s;
+  }
+}
