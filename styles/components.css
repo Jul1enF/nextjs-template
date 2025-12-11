@@ -125,8 +125,9 @@ only screen and (max-height: 600px) and (aspect-ratio > 1) {
     :root {
         --header-height: calc(var(--screen-coeff) * 80px);
         --horiz-menu-height: calc(var(--screen-coeff) * 45px);
+        --tab-bar-height: calc(var(--screen-coeff) * 86px);
         --page-padding-top: calc(var(--screen-coeff) * 30px);
-        --page-padding-bottom: calc(var(--screen-coeff) * 30px);
+        --page-padding-bottom: calc(var(--tab-bar-height) + calc(var(--screen-coeff) * 50px));
         --regular-border-radius: calc(var(--screen-coeff) * 10px);
         --regular-item-width: calc(var(--screen-coeff) * 280px);
         --regular-item-height: calc(var(--screen-coeff) * 40px);
