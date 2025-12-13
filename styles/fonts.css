@@ -72,7 +72,7 @@ only screen and (min-height: 600px) and (aspect-ratio > 1) {
         font-size: 1.2vw;
         letter-spacing: 0.05vw;
         margin-bottom: 0;
-        margin-top: 0.5em;
+        margin-top: 1.5vw;
         line-height: 1em;
     }
 }
@@ -137,7 +137,7 @@ only screen and (max-height: 600px) and (aspect-ratio > 1) {
         font-size: calc(var(--screen-coeff) * 18px);
         font-weight: 400;
         margin-bottom: 0;
-        margin-top: 0.5em;
+        margin-top: calc(var(--screen-coeff) * 20px);
         line-height: 1em;
     }
 
