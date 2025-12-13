@@ -11,7 +11,7 @@ function Home() {
         What's next ?!
       </h2>
 
-      <button className='regularItem brightRedBg regularText' onClick={() => setModalVisible(true)}>
+      <button className='regularItem strongRedBg regularText' onClick={() => setModalVisible(true)}>
         Confirmation
       </button>
 

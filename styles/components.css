@@ -24,7 +24,7 @@
     border: 2px solid var(--strong-grey);
 }
 
-.brightRedBg {
+.strongRedBg {
     background-color: var(--bright-red);
     border: none;
 }

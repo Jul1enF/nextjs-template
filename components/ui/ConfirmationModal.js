@@ -7,24 +7,25 @@ export default function ConfirmationModal({ visible, confirmationText, warning, 
     // Stop the scroll of the body of the page when scrolling in the menu
     useLockBodyScroll(visible);
 
+
     return (
         <>
             <div className={visible ? styles.activeOverlay : styles.disabledOverlay} onClick={closeModal}>
                 <div className={`card darkGreyBg ${visible ? styles.visibleModal : styles.hiddenModal}`} onClick={(e) => e.stopPropagation()} >
 
-                    <h3 className={styles.confirmationText}>
+                    <h3 className="regularText" style={{textAlign : "center"}}>
                         {confirmationText}
                     </h3>
 
                     <div className={`line ${styles.thisLine}`} />
 
-                    <p className={`warning ${warning.success ? "success" : "error"}`} style={!warning.text ? { height: 0, marginTop: 0 } : {}}>
-                        {warning.text}
+                    <button type="button" className="regularItem strongRedBg regularText" onClick={closeModal}>{cancelButtonText}</button>
+
+                    <button type="button" className="regularItem strongRedBg regularText" onClick={confirmationFunction}>{confirmationButtonText}</button>
+
+                    <p className={`warning ${warning?.success ? "success" : "error"}`} style={!warning?.text ? { height: 0, marginTop: 0 } : {}}>
+                        {warning?.text}
                     </p>
-
-                    <button type="button" className="regularItem brightRedBg regularText" onClick={confirmationFunction}>{confirmationButtonText}</button>
-
-                    <button type="button" className="regularItem brightRedBg regularText" onClick={closeModal}>{cancelButtonText}</button>
 
                 </div>
 
